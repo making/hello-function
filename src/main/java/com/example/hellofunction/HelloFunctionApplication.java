@@ -1,12 +1,15 @@
 package com.example.hellofunction;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-
 import java.util.function.Function;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.stream.annotation.EnableBinding;
+import org.springframework.cloud.stream.messaging.Processor;
+import org.springframework.context.annotation.Bean;
+
 @SpringBootApplication
+@EnableBinding(Processor.class)
 public class HelloFunctionApplication {
 
     @Bean
